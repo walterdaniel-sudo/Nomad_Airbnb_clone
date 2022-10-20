@@ -27,3 +27,5 @@ class Beagle(Dog):
     def woof(self):
         super().woof()
         print("super woof")
+
+# 드디어 맥에서 커밋성공...
