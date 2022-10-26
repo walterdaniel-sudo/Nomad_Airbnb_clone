@@ -39,6 +39,7 @@
 # Underscore Underscore method
 # dir = dir은 클래스의 속성과 메소드를 보여준다.
 # Python standard library 참고
+
 class Dog:
     def __init__(self, name):
         self.name = name
