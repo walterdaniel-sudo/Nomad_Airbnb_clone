@@ -1,4 +1,4 @@
-from unittest.util import _MAX_LENGTH
+from email.policy import default
 from django.db import models
 
 # Create your models here.
@@ -7,6 +7,14 @@ class House(models.Model):
     # Model definition for Houses
 
     name = models.CharField(max_length=140)
-    price = models.PositiveBigIntegerField()
+    price_per_night = models.PositiveBigIntegerField(verbose_name="Price", help_text="Positive Numbers Only")
     description = models.TextField()
-    adress = models.CharField(max_length=140)
+    address = models.CharField(max_length=140)
+    pets_allowed = models.BooleanField(
+        verbose_name="Pets Allowed?",
+        default=True,
+        help_text="Does this house allow pets?"
+    )
+
+    def __str__(self):
+        return self.name
