@@ -79,3 +79,30 @@ def say_hello2(name):
 say_hello2("C언어가 씨불씨불") # 우리가 함수를 부를 때 특정값을 그 함수에 보내고 싶을 때
 # 괄호안에 쓰는게 바로 Argument(인수)다. 그리고 그 인수를 저 함수의 name이라는 Parameter(매개변수)가 받아서 그 값을 쓰는 것이다.
 # 이 두 개념은 헷갈리기 때문에 확실히 기억해둘것.
+
+""" Multiple Parameters """
+# 여러개의 Parameters(매개변수들)은 위에 있는 매개변수와 인수의 확장개념
+# 말 그대로 여러개의 매개변수들을 받을 수 있다.
+# 쓰는 방법은 print()에서 여러 값을 출력할 때처럼 콤마(,)를 쓰면 됨.
+# 주의 할점은 반드시 순서를 지킬 것. 잘못 써서 name에 나이가 들어가면 안되니까
+# 또한 매개변수의 갯수와 인수의 갯수는 반드시 일치시켜야 한다. 안그럼 에러남.
+def say_hello3(user_name, user_age):
+    print("hello", user_name)
+    print("You are", user_age, "years old") 
+
+say_hello3("Daniel", 20)
+
+""" Functions Recap """
+'''
+함수란 일종의 기계적 장치로 어떠한 목적을 가지고 기능하는 장치를 만들면
+같은 목적의 동작을 요할 때 그 기계를 재활용 하는 것처럼
+함수또한 같은 목적의 기능을 수행하기 위해 만든 재활용 기계다.
+
+함수안에 특정값을 주고싶을 때 매개변수를 지정해 값을 받을 수 있다.
+매개변수에 넣는 값을 인수라고 한다.
+'''
+def tax_calculator(money):
+    print(money * 0.35) # 0.35은 세금비율
+
+tax_calculator(15000000000000)
+tax_calculator(150)
