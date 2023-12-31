@@ -106,3 +106,19 @@ def tax_calculator(money):
 
 tax_calculator(15000000000000)
 tax_calculator(150)
+
+""" Default Parameters (기본 매개변수) """
+def say_hello4(user_name):
+    print("Hello", user_name)
+
+# 기본적으로 매개변수를 만들면 그 갯수에 맞게 인수를 넣어줘야 한다.
+say_hello4("daniel")
+# say_hello4() # 그렇지 않고 아무런 인수도 넣지 않는다면 에러가 나게 될 것이다.
+# 그러나 서비스를 사용하는 유저 입장에선 이렇게 에러가 나고 프로그램이 종료되어버린다면
+# 그 경험이 그닥 좋지는 않을 것이다. 그러므로 아무런 인수가 들어오지 않았을 경우,
+# 그 상황마저도 그것에 맞게 동작하는 코드를 짜면 유저의 경험은 더욱 향상될 것이다.
+# say_hello4 함수의 경우 아무런 이름도 입력하지 않을 경우, Anonymous로 이름을 자동 대체하게 만들어보자.
+def say_hello5(user_name="Anonymous"): # 이런식으로 매개변수에 기본값을 설정 해주는 것이 바로 Default parameter(기본 매개변수)이다!
+    print("Hello", user_name)
+
+say_hello5()
